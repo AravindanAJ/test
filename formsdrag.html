@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="D:\webtraining\css\signupstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  </head>
+  <script>
+$(function(){
+        $(".btn").click(function(){
+            let value = $(".form-input").val();
+            if(value===''){
+               alert("PLEASE ENTER All REQUIRED FIELDS")
+            }
+            else{
+                alert("REGISTRATION FORM SUBMITTED SUCCESSFULLY")
+            }
+        })
+    });
+ 
+  $(function()
+  {
+$('.signup-form').draggable(); 
+  });
+ $(function()
+  {
+  $('.label-title').draggable(); 
+ 
+  });
+
+ $(function()
+  {
+   $('.mydiv').draggable(); 
+  });
+  $(function()
+  {
+   $('img').draggable(); 
+  });
+  </script>
+ 
+  <body id="dragdiv">
+    <img src="D:\webtraining\images\download.png" >
+    <form class="signup-form" action="" method="">
+      <div class="form-header" >
+        <h1 class="label-title"><b>REGISTRATION FORM</b></h1>
+     
+      <div class="form-body">
+        
+            <label for="firstname" class="label-title">First name *</label>
+            <div class="mydiv">
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="mydiv">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+          </div>
+          <div class="mydiv">
+        <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+      </div>
+      <div class="mydiv">
+            <label for="Location" class="label-title">Location*</label>
+            <input type="text" id="Location"  class="form-input" placeholder="enter your current location" required="required">
+          </div>
+          <div class="mydiv">
+            <label for="Phone Number" class="label-title">Phone Number *</label>
+            <input type="tel" id="Phone Number" name="Phone Number" class="form-input"  required="required">
+          </div>
+        
+          <div class="mydiv">
+            <label class="label-title">Gender:</label>
+            
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+            </div>
+          
+          <br>
+          <div class="mydiv">
+            <label for="experience" class="label-title">Age</label>
+            <input type="number" min="18" max="80"  value="18" class="form-input">
+          </div>
+          <div class="mydiv">
+            <label class="label-title">Education Level</label>
+            <select class="form-input" id="level" >
+              <option value="ug">UG</option>
+              <option value="pg">PG</option>
+              <option value="others">Other</option>
+            </select>
+          </div>
+         
+           <br>
+           <div class="mydiv">
+        <label  class="label-title">Department</label><br>
+         <label name="ECE">ECE</label>
+        <input type="checkbox" id="ECE"><br>
+        <label name="CSE">CSE</label>
+        <input type="checkbox" id="CSE"><br>
+        <label name="other">OTHERS</label>
+        <input type="checkbox" id="other"><br><br>
+        </div>
+        <div class="mydiv">
+        <label class="label-title" for="image">upload image:</label><br>
+        <input type="file" id="image" name="image"><br><br>
+      </div>
+      </div>
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn" id="btn1">submit</button>
+      </div>
+      </div>
+    </form>
+  </body>
+  </html>
